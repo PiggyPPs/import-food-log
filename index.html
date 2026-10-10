@@ -1,3 +1,38 @@
+
+AnriのMacBook Air、接続済み
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Index · HTML
 <!doctype html>
 <html lang="ja">
 <head>
@@ -31,7 +66,7 @@
     -webkit-font-smoothing: antialiased;
   }
   .wrap{ max-width: 880px; margin: 0 auto; padding: 56px 18px 90px; }
-
+ 
   header{ margin-bottom: 30px; }
   .eyebrow{
     display: inline-flex; align-items: center; gap: 8px;
@@ -42,7 +77,7 @@
   .eyebrow .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
   h1{ font-size: clamp(1.6rem, 4.4vw, 2.2rem); font-weight: 700; margin: 0 0 10px; }
   .subtitle{ color: var(--ink-soft); font-size: .92rem; margin: 0; }
-
+ 
   .card{
     background: var(--card); border: 1px solid var(--line); border-radius: 18px;
     box-shadow: var(--shadow); padding: 20px; margin-bottom: 22px;
@@ -52,17 +87,17 @@
   .stat .value{ font-size: 1.5rem; font-weight: 700; }
   .stat .value small{ font-size: .8rem; font-weight: 500; color: var(--ink-soft); margin-left: 3px; }
   .stat.warn .value{ color: var(--warn); }
-
+ 
   h2{ font-size: 1.05rem; margin: 30px 0 12px; }
   .note{ font-size: .8rem; color: var(--ink-soft); line-height: 1.75; }
-
+ 
   .tabs{ display: inline-flex; flex-wrap: wrap; gap: 4px; background: var(--accent-soft); padding: 4px; border-radius: 999px; }
   .tab{
     border: 0; background: transparent; color: var(--accent); font: inherit; font-size: .85rem; font-weight: 600;
     padding: 6px 14px; border-radius: 999px; cursor: pointer;
   }
   .tab.active{ background: var(--accent); color: #fff; }
-
+ 
   .chips{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
   .chip{
     border: 1px solid var(--line); background: #fff; color: var(--ink); font: inherit; font-size: .8rem;
@@ -71,7 +106,7 @@
   .chip .n{ color: var(--ink-soft); margin-left: 4px; font-size: .74rem; }
   .chip.active{ background: var(--ink); color: #fff; border-color: var(--ink); }
   .chip.active .n{ color: rgba(255,255,255,.7); }
-
+ 
   .filters-row{ display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
   .filters-row select{ flex: 1 1 140px; }
   .filters-row select, .filters-row input{
@@ -79,14 +114,14 @@
     border: 1px solid var(--line); background: #fff; color: var(--ink); min-width: 0;
   }
   .filters-row input{ flex: 1 1 200px; }
-
+ 
   .bars{ display: grid; gap: 7px; }
   .bar-row{ display: grid; grid-template-columns: 112px 1fr 34px; align-items: center; gap: 10px; font-size: .84rem; }
   .bar-row .name{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .bar-track{ height: 10px; background: var(--accent-soft); border-radius: 99px; overflow: hidden; }
   .bar-fill{ height: 100%; background: var(--accent); border-radius: 99px; }
   .bar-row .num{ text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
-
+ 
   .list{ display: grid; gap: 10px; }
   .item{ border: 1px solid var(--line); border-radius: 14px; padding: 13px 15px; background: #fff; }
   .item.domestic{ border-left: 4px solid var(--warn); }
@@ -99,10 +134,10 @@
   .item-reason{ font-size: .86rem; margin-top: 4px; line-height: 1.65; }
   .more{ display: block; margin: 14px auto 0; font: inherit; font-size: .85rem; padding: 8px 20px; border-radius: 999px; border: 1px solid var(--line); background: #fff; cursor: pointer; }
   .empty{ color: var(--ink-soft); font-size: .88rem; padding: 10px 0; }
-
+ 
   footer{ margin-top: 40px; font-size: .76rem; color: var(--ink-soft); line-height: 1.9; }
   footer a{ color: var(--accent); }
-
+ 
   @media (max-width: 560px){
     .stats{ grid-template-columns: 1fr 1fr; }
     .stat.updated{ grid-column: 1 / -1; }
@@ -112,19 +147,19 @@
 </head>
 <body>
 <div class="wrap">
-
+ 
   <header>
     <div class="eyebrow"><span class="dot"></span>Import Food Log</div>
     <h1>輸入食品・食器の違反ログ</h1>
     <p class="subtitle">厚生労働省が公表している「輸入食品等の食品衛生法違反事例」を、種類や国ごとに見やすくまとめています。食品だけでなく、食器や容器、乳幼児用のおもちゃも含みます。</p>
   </header>
-
+ 
   <div class="card stats">
     <div class="stat"><div class="label">表示中の違反</div><div class="value" id="statTotal">–<small>件</small></div></div>
     <div class="stat warn"><div class="label">うち国内で発見</div><div class="value" id="statDomestic">–<small>件</small></div></div>
     <div class="stat updated"><div class="label">最終チェック</div><div class="value" id="statChecked" style="font-size:1rem; padding-top:6px;">–</div></div>
   </div>
-
+ 
   <div class="card">
     <div class="tabs" id="placeTabs">
       <button class="tab active" data-place="all">すべて</button>
@@ -138,19 +173,19 @@
       <select id="periodSel" aria-label="期間">
         <option value="3">直近3か月</option>
         <option value="12" selected>直近1年</option>
-        <option value="all">保存している全期間</option>
+        <option value="all">保存している全期間（2026年4月〜）</option>
       </select>
       <input id="q" type="search" placeholder="品名や内容で検索（例：いちご、アゾルビン）">
     </div>
   </div>
-
+ 
   <h2>国別の件数</h2>
   <div class="card"><div class="bars" id="countryBars"></div></div>
-
+ 
   <h2>違反の一覧</h2>
   <div class="list" id="list"><div class="empty">読み込み中...</div></div>
   <button class="more" id="moreBtn" hidden>もっと見る</button>
-
+ 
   <footer>
     データ元：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/yunyu_kanshi/ihan/index.html" target="_blank" rel="noopener">厚生労働省「輸入食品等の食品衛生法違反事例」</a>（毎日自動でチェックしています）<br>
     このページは、公表データを見やすく整理した個人のページで、厚生労働省のページではありません。<br>
@@ -159,23 +194,23 @@
     ← <a href="https://piggy.pink/">PiggyPPの戯言</a>
   </footer>
 </div>
-
+ 
 <script>
-const CATS = ["残留農薬・動物用医薬品", "添加物", "菌・微生物", "カビ毒", "腐敗・カビ・異物", "放射線照射", "遺伝子組換え", "器具・容器", "その他"];
+const CATS = ["残留農薬・動物用医薬品", "添加物", "菌・微生物", "カビ毒", "腐敗・カビ・異物", "有害物質", "放射線照射", "遺伝子組換え", "器具・容器", "その他"];
 const PAGE = 40;
 let all = [];
 let state = { place: "all", cat: "all", country: "all", period: "12", q: "" };
 let shown = PAGE;
-
+ 
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-
+ 
 function monthsAgo(n){
   const d = new Date();
   d.setMonth(d.getMonth() - n + 1);
   return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
 }
-
+ 
 function base(){ // 場所・期間・検索で絞ったもの（種類・国のカウント用）
   const from = state.period === "all" ? "" : monthsAgo(Number(state.period));
   const q = state.q.trim().toLowerCase();
@@ -185,13 +220,13 @@ function base(){ // 場所・期間・検索で絞ったもの（種類・国の
     (!q || (r.product + " " + r.reason + " " + r.country).toLowerCase().includes(q))
   );
 }
-
+ 
 function render(){
   const b = base();
   const byCat = b.filter(r => state.country === "all" || r.country === state.country);
   const byCountry = b.filter(r => state.cat === "all" || r.category === state.cat);
   const rows = byCat.filter(r => state.cat === "all" || r.category === state.cat);
-
+ 
   // 種類のチップ
   const catCount = {};
   byCat.forEach(r => catCount[r.category] = (catCount[r.category] || 0) + 1);
@@ -200,7 +235,7 @@ function render(){
     CATS.filter(c => catCount[c] || state.cat === c).map(c =>
       `<button class="chip ${state.cat === c ? "active" : ""}" data-cat="${esc(c)}">${esc(c)}<span class="n">${catCount[c] || 0}</span></button>`
     ).join("");
-
+ 
   // 国の選択肢と棒グラフ
   const cc = {};
   byCountry.forEach(r => cc[r.country || "不明"] = (cc[r.country || "不明"] || 0) + 1);
@@ -215,11 +250,11 @@ function render(){
   $("countryBars").innerHTML = top.length ? top.map(([c, n]) =>
     `<div class="bar-row"><span class="name" title="${esc(c)}">${esc(c)}</span><div class="bar-track"><div class="bar-fill" style="width:${(n / max * 100).toFixed(1)}%"></div></div><span class="num">${n}</span></div>`
   ).join("") : `<div class="empty">該当するデータがありません。</div>`;
-
+ 
   // 数字
   $("statTotal").innerHTML = `${rows.length}<small>件</small>`;
   $("statDomestic").innerHTML = `${rows.filter(r => r.source === "domestic").length}<small>件</small>`;
-
+ 
   // 一覧
   const list = rows.slice(0, shown);
   $("list").innerHTML = list.length ? list.map(r => `
@@ -235,13 +270,13 @@ function render(){
     </div>`).join("") : `<div class="empty">該当する違反はありません。</div>`;
   $("moreBtn").hidden = rows.length <= shown;
 }
-
+ 
 function fmtDate(d){
   if(!d) return "";
   const p = d.split("-");
   return p.length === 3 ? `${p[0]}/${Number(p[1])}/${Number(p[2])} 公表` : `${p[0]}年${Number(p[1])}月分`;
 }
-
+ 
 document.addEventListener("click", e => {
   const t = e.target.closest("[data-place],[data-cat]");
   if(!t) return;
@@ -256,7 +291,7 @@ $("countrySel").addEventListener("change", e => { state.country = e.target.value
 $("periodSel").addEventListener("change", e => { state.period = e.target.value; shown = PAGE; render(); });
 $("q").addEventListener("input", e => { state.q = e.target.value; shown = PAGE; render(); });
 $("moreBtn").addEventListener("click", () => { shown += PAGE; render(); });
-
+ 
 (async () => {
   try{
     const [v, m] = await Promise.all([
@@ -273,3 +308,5 @@ $("moreBtn").addEventListener("click", () => { shown += PAGE; render(); });
 </script>
 </body>
 </html>
+ 
+Claudeが応答を完了しました
