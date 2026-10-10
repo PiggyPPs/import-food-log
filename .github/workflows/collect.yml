@@ -1,0 +1,34 @@
+name: Collect import food violations
+
+on:
+  schedule:
+    - cron: '23 22 * * *'   # 毎日 7:23（日本時間）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install
+        run: pip install openpyxl
+
+      - name: Collect data
+        run: python scripts/collect.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "import-food-log-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --quiet --cached || git commit -m "data: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+          git push
