@@ -95,6 +95,7 @@
   .tag{ display: inline-block; padding: 1px 9px; border-radius: 99px; font-size: .72rem; font-weight: 600; }
   .tag.cat{ background: var(--accent-soft); color: var(--accent-deep); }
   .tag.dom{ background: var(--warn-soft); color: var(--warn); }
+  .tag.sold{ background: transparent; color: var(--warn); border: 1px solid var(--warn); padding: 0 8px; }
   .item-product{ font-weight: 700; font-size: .95rem; line-height: 1.55; }
   .item-country{ font-size: .82rem; color: var(--ink-soft); margin-left: 6px; font-weight: 500; }
   .item-reason{ font-size: .86rem; margin-top: 4px; line-height: 1.65; }
@@ -129,10 +130,10 @@
   <div class="card">
     <div class="tabs" id="placeTabs">
       <button class="tab active" data-place="all">すべて</button>
-      <button class="tab" data-place="border">水際で止めた</button>
+      <button class="tab" data-place="border">輸入時に発見</button>
       <button class="tab" data-place="domestic">国内で発見</button>
     </div>
-    <div class="note" style="margin-top:10px;">「水際で止めた」は、空港や港の検疫所で見つかり、国内に出回る前に止められたものです。「国内で発見」は、国内に出回ったあとで、自治体などの検査で見つかったものです。</div>
+    <div class="note" style="margin-top:10px;">「輸入時に発見」は、空港や港の検疫所の検査で見つかったものです。多くは国内に出回る前に止められますが、結果を待たずに通関できる「モニタリング検査」では、わかったときには一部がすでに販売されていることもあります（「販売済み」などの印がついているもの）。「国内で発見」は、国内に出回ったあとで、自治体などの検査で見つかったものです。</div>
     <div class="chips" id="catChips"></div>
     <div class="filters-row">
       <select id="countrySel" aria-label="生産国"></select>
@@ -228,6 +229,7 @@ function render(){
       <div class="item-top">
         <span>${esc(fmtDate(r.date))}</span>
         ${r.source === "domestic" ? `<span class="tag dom">国内で発見</span>` : ""}
+        ${soldLabel(r) ? `<span class="tag sold">${esc(soldLabel(r))}</span>` : ""}
         <span class="tag cat">${esc(r.category)}</span>
         ${r.inspection ? `<span>${esc(r.inspection)}</span>` : ""}
       </div>
@@ -235,6 +237,12 @@ function render(){
       <div class="item-reason">${esc(r.reason)}</div>
     </div>`).join("") : `<div class="empty">該当する違反はありません。</div>`;
   $("moreBtn").hidden = rows.length <= shown;
+}
+
+// 措置状況から「販売済み」「消費済み」を取り出す（「廃棄済み」は含めない）
+function soldLabel(r){
+  const m = (r.action || "").match(/(全量|一部)(販売|消費)済み/);
+  return m ? m[0] : "";
 }
 
 function fmtDate(d){
