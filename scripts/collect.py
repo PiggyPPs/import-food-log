@@ -21,7 +21,7 @@ import openpyxl
 INDEX_URL = "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/yunyu_kanshi/ihan/index.html"
 DATA_PATH = "data/violations.json"
 META_PATH = "data/meta.json"
-START_MONTH = "2025-04"   # これより前の事例は保存しない（令和7年度から）
+START_MONTH = "2026-04"   # これより前の事例は保存しない（令和8年度から）
 MAX_FILES = 80
 UA = "Mozilla/5.0 (compatible; import-food-log/1.0; +https://piggypps.github.io/import-food-log/)"
 JST = timezone(timedelta(hours=9))
@@ -95,7 +95,10 @@ def categorize(product, reason):
         return "放射線照射"
     if re.search(r"遺伝子組換え|安全性未審査", r):
         return "遺伝子組換え"
-    if re.search(r"残留|農薬|動物用医薬品|オキシテトラサイクリン|エンロフロキサシン|クロラムフェニコール|ニトロフラン|マラカイトグリーン", r):
+    if re.search(r"残留|農薬|動物用医薬品|フラゾリドン|オキシテトラサイクリン|エンロフロキサシン|クロラムフェニコール|ニトロフラン|マラカイトグリーン", r):
+        return "残留農薬・動物用医薬品"
+    if re.search(r"成分規格不適合", r) and re.search(r"ppm|ppb|mg/kg", r) \
+            and not re.search(r"鉛|カドミウム|ヒ素|水銀|スズ|シアン", r):
         return "残留農薬・動物用医薬品"
     if re.search(r"添加物|使用基準|保存基準", r):
         return "添加物"
@@ -103,6 +106,8 @@ def categorize(product, reason):
         return "菌・微生物"
     if re.search(r"カビの発生|腐敗|変敗|異臭|異物|固化", r):
         return "腐敗・カビ・異物"
+    if re.search(r"シアン|ヒ素|水銀|鉛|カドミウム|メタノール|軽油|ヒスタミン|貝毒|麻痺性|下痢性", r):
+        return "有害物質"
     return "その他"
 
 
@@ -252,6 +257,9 @@ def main(local_files=None):
     for r in new:
         merged[r["id"]] = r
     data = [r for r in merged.values() if r["month"] >= START_MONTH]
+    for r in data:  # 分け方を変えたときに、前のデータも分け直す
+        r["category"] = categorize(r["product"], r["reason"])
+        r["country"] = norm_country(r["country"])
     data.sort(key=lambda r: (r["date"], r["product"]), reverse=True)
 
     os.makedirs("data", exist_ok=True)
