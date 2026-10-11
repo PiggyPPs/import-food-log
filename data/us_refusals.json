@@ -1,0 +1,659 @@
+[
+ {
+  "id": "417-0416513-7/40002/1",
+  "date": "2026-09-30",
+  "month": "2026-09",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "汚れ・腐敗"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "417-0416513-7/40002/2",
+  "date": "2026-09-30",
+  "month": "2026-09",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "汚れ・腐敗"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "EPM-0196215-4/10002/1",
+  "date": "2026-09-29",
+  "month": "2026-09",
+  "product": "HERBALS & BOTANICALS (NOT TEAS), N.E.C.",
+  "industry": "Vitamins, Minerals, Proteins, and Unconventional Dietary Specialties for Humans",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "3560"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "DS8-3034859-7/1060002/1",
+  "date": "2026-09-21",
+  "month": "2026-09",
+  "product": "RADISH (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "NUV-4010000-3/80002/1",
+  "date": "2026-09-03",
+  "month": "2026-09",
+  "product": "FOODS WITH SUPPLEMENTAL NUTRIENTS ADDED, WITH OR WITHOUT ARTIFICAL SWEETNERS",
+  "industry": "Dietary Conventional Foods and Meal Replacements",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "218",
+   "256",
+   "320",
+   "482"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "FY1-4102900-6/290002/1",
+  "date": "2026-08-27",
+  "month": "2026-08",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "汚れ・腐敗"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "FY1-4102900-6/500002/1",
+  "date": "2026-08-27",
+  "month": "2026-08",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "汚れ・腐敗"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "1FX-2198343-2/10002/1",
+  "date": "2026-07-23",
+  "month": "2026-07",
+  "product": "PLUM (PIT FRUIT)",
+  "industry": "Fruit and Fruit Products",
+  "industry_ja": "果物加工品",
+  "codes": [
+   "11",
+   "324"
+  ],
+  "kinds": [
+   "添加物・着色料",
+   "ラベル・表示"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "1FX-2767843-2/20002/1",
+  "date": "2026-07-23",
+  "month": "2026-07",
+  "product": "CANDY SPECIALTIES, N.E.C. (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-2767843-2/30002/1",
+  "date": "2026-07-23",
+  "month": "2026-07",
+  "product": "BROTH, N.E.C. (MEAT AND/OR VEGETABLE STOCK)",
+  "industry": "Soups",
+  "industry_ja": "スープ",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-3376590-0/20002/1",
+  "date": "2026-07-22",
+  "month": "2026-07",
+  "product": "CANDY SPECIALTIES, N.E.C. (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-3376590-0/20002/2",
+  "date": "2026-07-22",
+  "month": "2026-07",
+  "product": "CANDY SPECIALTIES, N.E.C. (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "K64-3065334-0/1020002/1",
+  "date": "2026-07-17",
+  "month": "2026-07",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "K64-3065334-0/1030002/1",
+  "date": "2026-07-17",
+  "month": "2026-07",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "788-1925541-1/10002/1",
+  "date": "2026-07-10",
+  "month": "2026-07",
+  "product": "HERBALS & BOTANICALS (NOT TEAS), N.E.C.",
+  "industry": "Vitamins, Minerals, Proteins, and Unconventional Dietary Specialties for Humans",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "3560"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "U47-2513202-9/10002/1",
+  "date": "2026-07-02",
+  "month": "2026-07",
+  "product": "SOFT CANDY WITHOUT NUTS AND FRUIT, N.E.C.  (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "1FX-9663387-9/10002/1",
+  "date": "2026-06-18",
+  "month": "2026-06",
+  "product": "VITAMIN, MINERAL, PROTEINS AND UNCONVENTIONAL DIETARY SPECIALITIES FOR HUMANS AND ANIMALS, N.E.C.",
+  "industry": "Vitamins, Minerals, Proteins, and Unconventional Dietary Specialties for Humans",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "2300",
+   "320",
+   "3300",
+   "3862",
+   "482"
+  ],
+  "kinds": [
+   "ラベル・表示",
+   "アレルギー表示"
+  ],
+  "safety": true,
+  "sampled": true
+ },
+ {
+  "id": "1FX-1733101-8/10002/1",
+  "date": "2026-06-16",
+  "month": "2026-06",
+  "product": "HERBALS & BOTANICALS (NOT TEAS), N.E.C.",
+  "industry": "Vitamins, Minerals, Proteins, and Unconventional Dietary Specialties for Humans",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "218",
+   "2300",
+   "320",
+   "324",
+   "482"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-8126413-6/20002/1",
+  "date": "2026-06-01",
+  "month": "2026-06",
+  "product": "RICE FLOUR",
+  "industry": "Whole Grains, Milled Grain Products, and Starch",
+  "industry_ja": "穀物・米",
+  "codes": [
+   "218",
+   "256",
+   "320",
+   "482"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1761530-0/10002/1",
+  "date": "2026-05-18",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1761530-0/20002/1",
+  "date": "2026-05-18",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-6605069-0/10002/1",
+  "date": "2026-05-08",
+  "month": "2026-05",
+  "product": "HERBALS & BOTANICALS (NOT TEAS), N.E.C.",
+  "industry": "Vitamins, Minerals, Proteins, and Unconventional Dietary Specialties for Humans",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "U47-2508358-6/10002/1",
+  "date": "2026-05-06",
+  "month": "2026-05",
+  "product": "SOFT CANDY WITHOUT NUTS AND FRUIT, N.E.C.  (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "U47-2508358-6/20002/1",
+  "date": "2026-05-06",
+  "month": "2026-05",
+  "product": "SOFT CANDY WITHOUT NUTS AND FRUIT, N.E.C.  (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "235-1757991-0/10002/1",
+  "date": "2026-05-06",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1757991-0/20002/1",
+  "date": "2026-05-06",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1757991-0/30002/1",
+  "date": "2026-05-06",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1750806-7/10002/1",
+  "date": "2026-05-05",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "235-1750806-7/20002/1",
+  "date": "2026-05-05",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": true
+ },
+ {
+  "id": "235-1761036-8/10002/1",
+  "date": "2026-05-01",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1761036-8/20002/1",
+  "date": "2026-05-01",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1761036-8/30002/1",
+  "date": "2026-05-01",
+  "month": "2026-05",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1753403-0/10002/1",
+  "date": "2026-04-29",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "235-1760468-4/10002/1",
+  "date": "2026-04-29",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1760468-4/20002/1",
+  "date": "2026-04-29",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1760468-4/30002/1",
+  "date": "2026-04-29",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1760468-4/40002/1",
+  "date": "2026-04-29",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "235-1760861-0/1170002/1",
+  "date": "2026-04-21",
+  "month": "2026-04",
+  "product": "PUFFER",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "3878"
+  ],
+  "kinds": [
+   "有害物質"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "235-1752882-6/10002/1",
+  "date": "2026-04-17",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "235-1752882-6/20002/1",
+  "date": "2026-04-17",
+  "month": "2026-04",
+  "product": "GEL CUPS, FRUIT FLAVORED",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "3422"
+  ],
+  "kinds": [
+   "その他"
+  ],
+  "safety": false,
+  "sampled": true
+ }
+]
