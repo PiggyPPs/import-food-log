@@ -113,16 +113,19 @@ def fetch_charges():
 RULES = [
     ("アレルギー表示", r"ALLERG|ALERGEN|MAJOR FOOD"),
     ("菌・微生物", r"SALMONEL|LISTERIA|E\.? ?COLI|BACTER|MICROB|PATHOGEN|BOTUL|CLOSTRID|STAPH"),
-    ("有害物質", r"POISON|HEAVY METAL|LEAD|MERCURY|ARSENIC|CADMIUM|MELAMINE|HISTAMINE|AFLATOX|TOXIN"),
+    ("有害物質", r"POISON|DELETERIOUS|HEAVY METAL|LEAD|MERCURY|ARSENIC|CADMIUM|MELAMINE|HISTAMINE|AFLATOX|TOXIN"),
     ("残留農薬・動物用医薬品", r"PESTIC|VET ?DRUG|DRUG RES|ANIMAL DRUG"),
-    ("添加物・着色料", r"COLOR|COLOUR|ADDITIVE|UNSAFE ADD|SULFIT|SULPHIT|UNSAFE COL"),
-    ("汚れ・腐敗", r"FILTH|DECOMP|PUTRID|ROTTEN|INSANIT|SPOIL"),
-    ("缶詰・びん詰の届け出", r"NO PROCESS|NEEDS FCE|FCE|SCHEDULED PROCESS|LOW ACID|ACIDIF|LACF|PROCESS FILING"),
-    ("登録・書類", r"NOT LISTED|REGIST|PRIOR NOTICE|FSVP|HACCP|NOT APPROVED FACIL|REFUSED INSPECT"),
-    ("医薬品・健康の表示", r"NEW DRUG|UNAPPROVED|DRUG|HEALTH C|DISEASE|CURE"),
-    ("ラベル・表示", r"LABEL|LBL|ENGLISH|USUAL NAME|INGRED|INGRE|NUTRIT|MISBRAND|FALSE|NET ?(WT|CONT|QUANT)|DECLAR|NAME"),
+    ("添加物・着色料", r"COLOR ADDITIVE|COLOUR|FOOD ADDITIVE|UNSAFE ADD|SULFIT|SULPHIT|UNSAFE COL"),
+    ("食品として不適", r"UNFIT FOR FOOD"),
+    ("汚れ・腐敗", r"FILTH|DECOMP|PUTRID|ROTTEN|SPOIL"),
+    ("製造・衛生管理の基準", r"123\.\d|HACCP|GOOD MANUFACTURING|INSANITARY"),
+    ("缶詰・びん詰の届け出", r"SCHEDULED PROCESS|LOW ACID|ACIDIFIED|LACF|108\.(25|35)|113\.|114\."),
+    ("登録・書類", r"NOT LISTED|REGIST|PRIOR NOTICE|FSVP|REFUSED INSPECT|FOREIGN SUPPLIER"),
+    ("医薬品・健康の表示", r"NEW DRUG|UNAPPROVED|DISEASE|CURE|MITIGATE"),
+    ("ラベル・表示", r"MISBRAND|LABEL|ENGLISH|USUAL NAME|INGREDIENT|NUTRITION|FALSE|NET QUANTITY|DECLAR"),
 ]
-SAFETY = {"アレルギー表示", "菌・微生物", "有害物質", "残留農薬・動物用医薬品", "添加物・着色料", "汚れ・腐敗"}
+ORDER = [n for n, _ in RULES] + ["その他"]
+SAFETY = {"アレルギー表示", "菌・微生物", "有害物質", "残留農薬・動物用医薬品", "添加物・着色料", "食品として不適", "汚れ・腐敗"}
 
 INDUSTRY_JA = [
     (r"FISH|SEAFOOD|SHELLFISH", "魚介類"),
@@ -175,7 +178,7 @@ def categorize(codes, charges):
         else:
             if "その他" not in cats:
                 cats.append("その他")
-    return cats or ["その他"]
+    return sorted(cats or ["その他"], key=ORDER.index)
 
 
 def main():
