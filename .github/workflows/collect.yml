@@ -25,6 +25,13 @@ jobs:
       - name: Collect data
         run: python scripts/collect.py
 
+      - name: Collect US refusals (FDA)
+        continue-on-error: true
+        env:
+          FDA_USER: ${{ secrets.FDA_USER }}
+          FDA_KEY: ${{ secrets.FDA_KEY }}
+        run: python scripts/collect_us.py
+
       - name: Commit and push
         run: |
           git config user.name "import-food-log-bot"
