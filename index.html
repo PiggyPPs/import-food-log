@@ -95,6 +95,14 @@
   .tag{ display: inline-block; padding: 1px 9px; border-radius: 99px; font-size: .72rem; font-weight: 600; }
   .tag.cat{ background: var(--accent-soft); color: var(--accent-deep); }
   .tag.dom{ background: var(--warn-soft); color: var(--warn); }
+  .tag.safe{ background: var(--warn-soft); color: var(--warn); }
+  .tag.code{ background: transparent; color: var(--ink-soft); border: 1px solid var(--line); padding: 0 7px; font-weight: 500; font-family: ui-monospace, Menlo, monospace; font-size: .68rem; }
+  .mode{ display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 22px; }
+  .mode button{ font: inherit; text-align: left; padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  .mode button b{ display: block; font-family: "Shippori Mincho", serif; font-size: 1.02rem; }
+  .mode button span{ font-size: .76rem; color: var(--ink-soft); }
+  .mode button.active{ background: var(--accent); border-color: var(--accent); color: #fff; }
+  .mode button.active span{ color: rgba(255,255,255,.82); }
   .tag.sold{ background: transparent; color: var(--warn); border: 1px solid var(--warn); padding: 0 8px; }
   .item-product{ font-weight: 700; font-size: .95rem; line-height: 1.55; }
   .item-country{ font-size: .82rem; color: var(--ink-soft); margin-left: 6px; font-weight: 500; }
@@ -118,22 +126,24 @@
   <header>
     <div class="eyebrow"><span class="dot"></span>Import Food Log</div>
     <h1>輸入食品・食器の違反ログ</h1>
-    <p class="subtitle">厚生労働省が公表している「輸入食品等の食品衛生法違反事例」を、種類や国ごとに見やすくまとめています。食品だけでなく、食器や容器、乳幼児用のおもちゃも含みます。</p>
+    <p class="subtitle">日本に入ってくるときに止められた食品・食器と、日本から輸出してアメリカで止められた食品の記録を、種類や国ごとに見やすくまとめています。</p>
   </header>
+
+  <div class="mode" id="modeTabs">
+    <button class="active" data-mode="in"><b>日本に入るもの</b><span>輸入時の違反（厚生労働省）</span></button>
+    <button data-mode="out"><b>日本から出たもの</b><span>アメリカでの輸入拒否（FDA）</span></button>
+  </div>
 
   <div class="card stats">
     <div class="stat"><div class="label">表示中の違反</div><div class="value" id="statTotal">–<small>件</small></div></div>
-    <div class="stat warn"><div class="label">うち国内で発見</div><div class="value" id="statDomestic">–<small>件</small></div></div>
+    <div class="stat warn"><div class="label" id="stat2Label">うち国内で発見</div><div class="value" id="statDomestic">–<small>件</small></div></div>
     <div class="stat updated"><div class="label">最終チェック</div><div class="value" id="statChecked" style="font-size:1rem; padding-top:6px;">–</div></div>
   </div>
 
   <div class="card">
-    <div class="tabs" id="placeTabs">
-      <button class="tab active" data-place="all">すべて</button>
-      <button class="tab" data-place="border">輸入時に発見</button>
-      <button class="tab" data-place="domestic">国内で発見</button>
-    </div>
-    <div class="note" style="margin-top:10px;">「輸入時に発見」は、空港や港の検疫所の検査で見つかったものです。多くは国内に出回る前に止められますが、結果を待たずに通関できる「モニタリング検査」では、わかったときには一部がすでに販売されていることもあります（「販売済み」などの印がついているもの）。「国内で発見」は、国内に出回ったあとで、自治体などの検査で見つかったものです。</div>
+    <div class="tabs" id="placeTabs"></div>
+    <div class="note" id="modeNoteIn" style="margin-top:10px;">「輸入時に発見」は、空港や港の検疫所の検査で見つかったものです。多くは国内に出回る前に止められますが、結果を待たずに通関できる「モニタリング検査」では、わかったときには一部がすでに販売されていることもあります（「販売済み」などの印がついているもの）。「国内で発見」は、国内に出回ったあとで、自治体などの検査で見つかったものです。</div>
+    <div class="note" id="modeNoteOut" style="margin-top:10px;" hidden>日本で作られてアメリカに輸出された食品・食器のうち、アメリカの FDA（食品医薬品局）が輸入を認めなかったものです。理由には、ラベルの英語表記や届け出の不足など「書類・表示の不備」も多く含まれ、必ずしも安全性に問題があったという意味ではありません。品名は FDA のデータの英語表記のままです。</div>
     <div class="chips" id="catChips"></div>
     <div class="filters-row">
       <select id="countrySel" aria-label="生産国"></select>
@@ -146,7 +156,7 @@
     </div>
   </div>
 
-  <h2>国別の件数</h2>
+  <h2 id="barsTitle">国別の件数</h2>
   <div class="card"><div class="bars" id="countryBars"></div></div>
 
   <h2>違反の一覧</h2>
@@ -154,8 +164,8 @@
   <button class="more" id="moreBtn" hidden>もっと見る</button>
 
   <footer>
-    データ元：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/yunyu_kanshi/ihan/index.html" target="_blank" rel="noopener">厚生労働省「輸入食品等の食品衛生法違反事例」</a>（毎日自動でチェックしています）<br>
-    このページは、公表データを見やすく整理した個人のページで、厚生労働省のページではありません。<br>
+    データ元：<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/yunyu_kanshi/ihan/index.html" target="_blank" rel="noopener">厚生労働省「輸入食品等の食品衛生法違反事例」</a>（毎日チェック）／<a href="https://datadashboard.fda.gov/oii/cd/imprefusals.htm" target="_blank" rel="noopener">FDA Data Dashboard「Import Refusals」</a>（FDA の更新は週1回）<br>
+    このページは、公表データを見やすく整理した個人のページで、厚生労働省や FDA のページではありません。<br>
     「種類」の分け方は、違反の内容の文字から自動で判定しているため、完全ではありません。<br>
     製造者・輸入者などの会社名は、表示していません。正確な内容は、データ元をご確認ください。<br>
     ← <a href="https://piggy.pink/">PiggyPPの戯言</a>
@@ -163,10 +173,26 @@
 </div>
 
 <script>
-const CATS = ["残留農薬・動物用医薬品", "添加物", "菌・微生物", "カビ毒", "腐敗・カビ・異物", "有害物質", "放射線照射", "遺伝子組換え", "器具・容器", "その他"];
+const MODES = {
+  in: {
+    cats: ["残留農薬・動物用医薬品", "添加物", "菌・微生物", "カビ毒", "腐敗・カビ・異物", "有害物質", "放射線照射", "遺伝子組換え", "器具・容器", "その他"],
+    places: [["all", "すべて"], ["border", "輸入時に発見"], ["domestic", "国内で発見"]],
+    stat2: "うち国内で発見", barsTitle: "国別の件数", groupAll: "すべての国",
+    q: "品名や内容で検索（例：いちご、アゾルビン）",
+  },
+  out: {
+    cats: ["アレルギー表示", "菌・微生物", "有害物質", "残留農薬・動物用医薬品", "添加物・着色料", "汚れ・腐敗", "缶詰・びん詰の届け出", "登録・書類", "医薬品・健康の表示", "ラベル・表示", "その他"],
+    places: [["all", "すべて"], ["safety", "安全性に関わるもの"], ["paper", "書類・表示の不備"]],
+    stat2: "うち安全性に関わるもの", barsTitle: "品目別の件数", groupAll: "すべての品目",
+    q: "品名や理由コードで検索（例：candy、COLOR）",
+  },
+};
 const PAGE = 40;
-let all = [];
-let state = { place: "all", cat: "all", country: "all", period: "12", q: "" };
+const data = { in: [], out: [] };
+const meta = { in: {}, out: {} };
+let outLoaded = false;
+let mode = "in";
+let state = { place: "all", cat: "all", group: "all", period: "12", q: "" };
 let shown = PAGE;
 
 const $ = id => document.getElementById(id);
@@ -178,39 +204,75 @@ function monthsAgo(n){
   return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
 }
 
-function base(){ // 場所・期間・検索で絞ったもの（種類・国のカウント用）
+// 輸出側のデータを、輸入側と同じ形にそろえる
+function normalizeOut(r){
+  return {
+    ...r,
+    place: r.safety ? "safety" : "paper",
+    group: r.industry_ja || "その他の食品",
+    category: (r.kinds && r.kinds[0]) || "その他",
+    search: [r.product, r.industry, r.industry_ja, (r.kinds || []).join(" "), (r.codes || []).join(" ")].join(" "),
+  };
+}
+function normalizeIn(r){
+  return { ...r, place: r.source, group: r.country, search: r.product + " " + r.reason + " " + r.country };
+}
+
+function base(){
   const from = state.period === "all" ? "" : monthsAgo(Number(state.period));
   const q = state.q.trim().toLowerCase();
-  return all.filter(r =>
-    (state.place === "all" || r.source === state.place) &&
+  return data[mode].filter(r =>
+    (state.place === "all" || r.place === state.place) &&
     (!from || r.month >= from) &&
-    (!q || (r.product + " " + r.reason + " " + r.country).toLowerCase().includes(q))
+    (!q || r.search.toLowerCase().includes(q))
   );
+}
+const hasCat = (r, c) => mode === "out" ? (r.kinds || []).includes(c) : r.category === c;
+
+function renderTabs(){
+  const M = MODES[mode];
+  $("placeTabs").innerHTML = M.places.map(([v, label]) =>
+    `<button class="tab ${state.place === v ? "active" : ""}" data-place="${v}">${label}</button>`).join("");
+  $("modeNoteIn").hidden = mode !== "in";
+  $("modeNoteOut").hidden = mode !== "out";
+  $("stat2Label").textContent = M.stat2;
+  $("barsTitle").textContent = M.barsTitle;
+  $("q").placeholder = M.q;
+  document.querySelectorAll("#modeTabs button").forEach(b => b.classList.toggle("active", b.dataset.mode === mode));
+  const m = meta[mode] || {};
+  $("statChecked").textContent = m.checked_at || "–";
 }
 
 function render(){
+  const M = MODES[mode];
+  if(mode === "out" && !outLoaded){
+    $("list").innerHTML = `<div class="empty">輸出側のデータは準備中です。</div>`;
+    $("catChips").innerHTML = ""; $("countryBars").innerHTML = ""; $("moreBtn").hidden = true;
+    $("statTotal").innerHTML = `–<small>件</small>`; $("statDomestic").innerHTML = `–<small>件</small>`;
+    return;
+  }
   const b = base();
-  const byCat = b.filter(r => state.country === "all" || r.country === state.country);
-  const byCountry = b.filter(r => state.cat === "all" || r.category === state.cat);
-  const rows = byCat.filter(r => state.cat === "all" || r.category === state.cat);
+  const byCat = b.filter(r => state.group === "all" || r.group === state.group);
+  const byGroup = b.filter(r => state.cat === "all" || hasCat(r, state.cat));
+  const rows = byCat.filter(r => state.cat === "all" || hasCat(r, state.cat));
 
-  // 種類のチップ
+  // 種類のチップ（輸出側は1件に複数の理由があるので、それぞれ数える）
   const catCount = {};
-  byCat.forEach(r => catCount[r.category] = (catCount[r.category] || 0) + 1);
+  byCat.forEach(r => (mode === "out" ? (r.kinds || []) : [r.category]).forEach(c => catCount[c] = (catCount[c] || 0) + 1));
   $("catChips").innerHTML =
     `<button class="chip ${state.cat === "all" ? "active" : ""}" data-cat="all">すべての種類<span class="n">${byCat.length}</span></button>` +
-    CATS.filter(c => catCount[c] || state.cat === c).map(c =>
+    M.cats.filter(c => catCount[c] || state.cat === c).map(c =>
       `<button class="chip ${state.cat === c ? "active" : ""}" data-cat="${esc(c)}">${esc(c)}<span class="n">${catCount[c] || 0}</span></button>`
     ).join("");
 
-  // 国の選択肢と棒グラフ
+  // 国（品目）の選択肢と棒グラフ
   const cc = {};
-  byCountry.forEach(r => cc[r.country || "不明"] = (cc[r.country || "不明"] || 0) + 1);
+  byGroup.forEach(r => cc[r.group || "不明"] = (cc[r.group || "不明"] || 0) + 1);
   const sorted = Object.entries(cc).sort((a, b) => b[1] - a[1]);
-  $("countrySel").innerHTML = `<option value="all">すべての国</option>` +
-    sorted.map(([c, n]) => `<option value="${esc(c)}" ${state.country === c ? "selected" : ""}>${esc(c)}（${n}）</option>`).join("");
-  if(state.country !== "all" && !cc[state.country]){
-    $("countrySel").insertAdjacentHTML("beforeend", `<option value="${esc(state.country)}" selected>${esc(state.country)}（0）</option>`);
+  $("countrySel").innerHTML = `<option value="all">${M.groupAll}</option>` +
+    sorted.map(([c, n]) => `<option value="${esc(c)}" ${state.group === c ? "selected" : ""}>${esc(c)}（${n}）</option>`).join("");
+  if(state.group !== "all" && !cc[state.group]){
+    $("countrySel").insertAdjacentHTML("beforeend", `<option value="${esc(state.group)}" selected>${esc(state.group)}（0）</option>`);
   }
   const top = sorted.slice(0, 10);
   const max = top.length ? top[0][1] : 1;
@@ -218,16 +280,21 @@ function render(){
     `<div class="bar-row"><span class="name" title="${esc(c)}">${esc(c)}</span><div class="bar-track"><div class="bar-fill" style="width:${(n / max * 100).toFixed(1)}%"></div></div><span class="num">${n}</span></div>`
   ).join("") : `<div class="empty">該当するデータがありません。</div>`;
 
-  // 数字
   $("statTotal").innerHTML = `${rows.length}<small>件</small>`;
-  $("statDomestic").innerHTML = `${rows.filter(r => r.source === "domestic").length}<small>件</small>`;
+  const n2 = mode === "out" ? rows.filter(r => r.safety).length : rows.filter(r => r.source === "domestic").length;
+  $("statDomestic").innerHTML = `${n2}<small>件</small>`;
 
-  // 一覧
   const list = rows.slice(0, shown);
-  $("list").innerHTML = list.length ? list.map(r => `
+  $("list").innerHTML = list.length ? list.map(r => mode === "out" ? itemOut(r) : itemIn(r)).join("")
+    : `<div class="empty">該当する記録はありません。</div>`;
+  $("moreBtn").hidden = rows.length <= shown;
+}
+
+function itemIn(r){
+  return `
     <div class="item ${r.source === "domestic" ? "domestic" : ""}">
       <div class="item-top">
-        <span>${esc(fmtDate(r.date))}</span>
+        <span>${esc(fmtDate(r.date, "公表"))}</span>
         ${r.source === "domestic" ? `<span class="tag dom">国内で発見</span>` : ""}
         ${soldLabel(r) ? `<span class="tag sold">${esc(soldLabel(r))}</span>` : ""}
         <span class="tag cat">${esc(r.category)}</span>
@@ -235,9 +302,23 @@ function render(){
       </div>
       <div class="item-product">${esc(r.product)}<span class="item-country">${esc(r.country)}</span></div>
       <div class="item-reason">${esc(r.reason)}</div>
-    </div>`).join("") : `<div class="empty">該当する違反はありません。</div>`;
-  $("moreBtn").hidden = rows.length <= shown;
+    </div>`;
 }
+
+function itemOut(r){
+  return `
+    <div class="item ${r.safety ? "domestic" : ""}">
+      <div class="item-top">
+        <span>${esc(fmtDate(r.date, "拒否"))}</span>
+        ${r.safety ? `<span class="tag safe">安全性に関わる理由あり</span>` : ""}
+        ${(r.kinds || []).map(k => `<span class="tag cat">${esc(k)}</span>`).join("")}
+        ${r.sampled ? `<span>検査で確認</span>` : ""}
+      </div>
+      <div class="item-product">${esc(r.product)}<span class="item-country">${esc(r.industry_ja)}</span></div>
+      <div class="item-reason">FDA の理由コード：${(r.codes || []).map(c => `<span class="tag code" title="${esc(charges[c] || "")}">${esc(c)}</span>`).join(" ")}</div>
+    </div>`;
+}
+let charges = {};
 
 // 措置状況から「販売済み」「消費済み」を取り出す（「廃棄済み」は含めない）
 function soldLabel(r){
@@ -245,36 +326,50 @@ function soldLabel(r){
   return m ? m[0] : "";
 }
 
-function fmtDate(d){
+function fmtDate(d, word){
   if(!d) return "";
   const p = d.split("-");
-  return p.length === 3 ? `${p[0]}/${Number(p[1])}/${Number(p[2])} 公表` : `${p[0]}年${Number(p[1])}月分`;
+  return p.length === 3 ? `${p[0]}/${Number(p[1])}/${Number(p[2])} ${word}` : `${p[0]}年${Number(p[1])}月分`;
 }
 
 document.addEventListener("click", e => {
+  const m = e.target.closest("[data-mode]");
+  if(m){
+    if(m.dataset.mode !== mode){
+      mode = m.dataset.mode;
+      state = { ...state, place: "all", cat: "all", group: "all", q: "" };
+      $("q").value = "";
+    }
+    shown = PAGE; renderTabs(); render(); return;
+  }
   const t = e.target.closest("[data-place],[data-cat]");
   if(!t) return;
-  if(t.dataset.place){
-    state.place = t.dataset.place;
-    document.querySelectorAll("#placeTabs .tab").forEach(b => b.classList.toggle("active", b === t));
-  }
+  if(t.dataset.place){ state.place = t.dataset.place; renderTabs(); }
   if(t.dataset.cat) state.cat = t.dataset.cat;
   shown = PAGE; render();
 });
-$("countrySel").addEventListener("change", e => { state.country = e.target.value; shown = PAGE; render(); });
+$("countrySel").addEventListener("change", e => { state.group = e.target.value; shown = PAGE; render(); });
 $("periodSel").addEventListener("change", e => { state.period = e.target.value; shown = PAGE; render(); });
 $("q").addEventListener("input", e => { state.q = e.target.value; shown = PAGE; render(); });
 $("moreBtn").addEventListener("click", () => { shown += PAGE; render(); });
 
+const getJSON = (path, fallback) => fetch(path + "?_=" + Date.now()).then(r => r.ok ? r.json() : fallback).catch(() => fallback);
+
 (async () => {
   try{
-    const [v, m] = await Promise.all([
-      fetch("data/violations.json?_=" + Date.now()).then(r => r.json()),
-      fetch("data/meta.json?_=" + Date.now()).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    const [v, m, uv, um, ch] = await Promise.all([
+      getJSON("data/violations.json", null),
+      getJSON("data/meta.json", {}),
+      getJSON("data/us_refusals.json", null),
+      getJSON("data/us_meta.json", {}),
+      getJSON("data/us_charges.json", {}),
     ]);
-    all = v;
-    $("statChecked").textContent = m.checked_at || "–";
-    render();
+    if(!v) throw new Error("no data");
+    data.in = v.map(normalizeIn);
+    meta.in = m;
+    if(Array.isArray(uv)){ data.out = uv.map(normalizeOut); outLoaded = true; }
+    meta.out = um; charges = ch || {};
+    renderTabs(); render();
   }catch(err){
     $("list").innerHTML = `<div class="empty">データを読み込めませんでした。</div>`;
   }
