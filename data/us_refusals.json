@@ -10,9 +10,9 @@
    "2580"
   ],
   "kinds": [
-   "汚れ・腐敗"
+   "製造・衛生管理の基準"
   ],
-  "safety": true,
+  "safety": false,
   "sampled": false
  },
  {
@@ -26,9 +26,9 @@
    "2580"
   ],
   "kinds": [
-   "汚れ・腐敗"
+   "製造・衛生管理の基準"
   ],
-  "safety": true,
+  "safety": false,
   "sampled": false
  },
  {
@@ -42,7 +42,7 @@
    "3560"
   ],
   "kinds": [
-   "その他"
+   "製造・衛生管理の基準"
   ],
   "safety": false,
   "sampled": false
@@ -93,9 +93,9 @@
    "2580"
   ],
   "kinds": [
-   "汚れ・腐敗"
+   "製造・衛生管理の基準"
   ],
-  "safety": true,
+  "safety": false,
   "sampled": false
  },
  {
@@ -109,9 +109,9 @@
    "2580"
   ],
   "kinds": [
-   "汚れ・腐敗"
+   "製造・衛生管理の基準"
   ],
-  "safety": true,
+  "safety": false,
   "sampled": false
  },
  {
@@ -239,7 +239,7 @@
    "3560"
   ],
   "kinds": [
-   "その他"
+   "製造・衛生管理の基準"
   ],
   "safety": false,
   "sampled": false
@@ -255,9 +255,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  },
  {
@@ -275,8 +275,8 @@
    "482"
   ],
   "kinds": [
-   "ラベル・表示",
-   "アレルギー表示"
+   "アレルギー表示",
+   "ラベル・表示"
   ],
   "safety": true,
   "sampled": true
@@ -331,9 +331,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -347,9 +347,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -379,9 +379,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  },
  {
@@ -395,9 +395,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  },
  {
@@ -411,9 +411,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -427,9 +427,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -443,9 +443,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -459,9 +459,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  },
  {
@@ -491,9 +491,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -507,9 +507,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -523,9 +523,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -539,9 +539,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  },
  {
@@ -555,9 +555,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -571,9 +571,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -587,9 +587,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -603,9 +603,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": false
  },
  {
@@ -635,9 +635,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  },
  {
@@ -651,9 +651,9 @@
    "3422"
   ],
   "kinds": [
-   "その他"
+   "食品として不適"
   ],
-  "safety": false,
+  "safety": true,
   "sampled": true
  }
 ]
