@@ -1,5 +1,69 @@
 [
  {
+  "id": "1FX-2581497-2/20002/2",
+  "date": "2026-10-06",
+  "month": "2026-10",
+  "product": "CANDY SPECIALTIES, N.E.C. (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-2581497-2/20002/1",
+  "date": "2026-10-06",
+  "month": "2026-10",
+  "product": "CANDY SPECIALTIES, N.E.C. (WITHOUT CHOCOLATE)",
+  "industry": "Candy without Chocolate, Candy Specialties, and Chewing Gum",
+  "industry_ja": "菓子",
+  "codes": [
+   "324"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "K64-3065975-0/1200002/1",
+  "date": "2026-10-02",
+  "month": "2026-10",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "K64-3065975-0/1210002/1",
+  "date": "2026-10-02",
+  "month": "2026-10",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
   "id": "417-0416513-7/40002/1",
   "date": "2026-09-30",
   "month": "2026-09",
