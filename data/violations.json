@@ -3588,6 +3588,19 @@
   "law": "第６条第１号"
  },
  {
+  "id": "81cc6fb653eebc2a",
+  "source": "border",
+  "date": "2026-05-14",
+  "month": "2026-05",
+  "product": "大麦",
+  "country": "アメリカ",
+  "reason": "カビの発生、異臭、変敗、変色及び集塊化を認めた",
+  "category": "腐敗・カビ・異物",
+  "inspection": "行政検査",
+  "action": "廃棄",
+  "law": "第６条第１号"
+ },
+ {
   "id": "96536fdd2654756f",
   "source": "border",
   "date": "2026-05-14",
