@@ -1,5 +1,38 @@
 [
  {
+  "id": "NUV-4039671-8/40002/1",
+  "date": "2026-10-15",
+  "month": "2026-10",
+  "product": "WHEY BASE INFANT FORMULA PRODUCT (0-12 MONTHS), POWDER FORMULA",
+  "industry": "Baby (Infant and Junior) Food Products",
+  "industry_ja": "その他の食品",
+  "codes": [
+   "256",
+   "321"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "FY1-4106818-6/210002/1",
+  "date": "2026-10-14",
+  "month": "2026-10",
+  "product": "SQUID, BREADED, OTHER AQUATIC SPECIES",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
   "id": "1FX-2581497-2/20002/2",
   "date": "2026-10-06",
   "month": "2026-10",
