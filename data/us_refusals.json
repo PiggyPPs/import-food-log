@@ -1,5 +1,123 @@
 [
  {
+  "id": "FY1-4103443-6/70002/1",
+  "date": "2026-10-22",
+  "month": "2026-10",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "1FX-3654157-2/10002/1",
+  "date": "2026-10-21",
+  "month": "2026-10",
+  "product": "VITAMIN, MINERAL, PROTEINS AND UNCONVENTIONAL DIETARY SPECIALITIES FOR HUMANS AND ANIMALS, N.E.C.",
+  "industry": "Vitamins, Minerals, Proteins, and Unconventional Dietary Specialties for Humans",
+  "industry_ja": "サプリメント",
+  "codes": [
+   "2300",
+   "324",
+   "482"
+  ],
+  "kinds": [
+   "ラベル・表示"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "K64-3066307-5/960002/1",
+  "date": "2026-10-21",
+  "month": "2026-10",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "64"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "K64-3066307-5/970002/1",
+  "date": "2026-10-21",
+  "month": "2026-10",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "64"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "235-1768372-0/290002/1",
+  "date": "2026-10-20",
+  "month": "2026-10",
+  "product": "SNAILS, AQUATIC, OTHER AQUATIC SPECIES",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "218",
+   "3300",
+   "83"
+  ],
+  "kinds": [
+   "アレルギー表示",
+   "製造・衛生管理の基準",
+   "ラベル・表示"
+  ],
+  "safety": true,
+  "sampled": true
+ },
+ {
+  "id": "235-1768372-0/300002/1",
+  "date": "2026-10-20",
+  "month": "2026-10",
+  "product": "SNAILS, AQUATIC, OTHER AQUATIC SPECIES",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "83"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": true
+ },
+ {
+  "id": "235-1766384-7/40002/1",
+  "date": "2026-10-19",
+  "month": "2026-10",
+  "product": "FISH, N.E.C.",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "295"
+  ],
+  "kinds": [
+   "菌・微生物"
+  ],
+  "safety": true,
+  "sampled": true
+ },
+ {
   "id": "NUV-4039671-8/40002/1",
   "date": "2026-10-15",
   "month": "2026-10",
