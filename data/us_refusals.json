@@ -1,5 +1,69 @@
 [
  {
+  "id": "FY1-4106465-6/60002/1",
+  "date": "2026-11-04",
+  "month": "2026-11",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "9ES-0106635-4/160002/1",
+  "date": "2026-11-03",
+  "month": "2026-11",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "9ES-0106635-4/170002/1",
+  "date": "2026-11-03",
+  "month": "2026-11",
+  "product": "GINGER ROOT (ROOT & TUBER VEGETABLE)",
+  "industry": "Vegetables and Vegetable Products",
+  "industry_ja": "野菜加工品",
+  "codes": [
+   "11"
+  ],
+  "kinds": [
+   "添加物・着色料"
+  ],
+  "safety": true,
+  "sampled": false
+ },
+ {
+  "id": "FY1-4103691-0/160002/1",
+  "date": "2026-11-02",
+  "month": "2026-11",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
   "id": "FY1-4103443-6/70002/1",
   "date": "2026-10-22",
   "month": "2026-10",
