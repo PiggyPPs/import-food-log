@@ -1,5 +1,38 @@
 [
  {
+  "id": "NUV-4087699-0/380002/1",
+  "date": "2026-11-19",
+  "month": "2026-11",
+  "product": "SARDINES (BRISLING, SPRATS, PILCHARDS, ETC.)",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "308",
+   "3821"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
+  "id": "417-0417739-7/40002/1",
+  "date": "2026-11-17",
+  "month": "2026-11",
+  "product": "MACKEREL (ALL EXCEPT SCOMBEROMORUS SP, EG SPANISH OR KING SEE '22')",
+  "industry": "Fishery/Seafood Products",
+  "industry_ja": "魚介類",
+  "codes": [
+   "2580"
+  ],
+  "kinds": [
+   "製造・衛生管理の基準"
+  ],
+  "safety": false,
+  "sampled": false
+ },
+ {
   "id": "FY1-4106465-6/60002/1",
   "date": "2026-11-04",
   "month": "2026-11",
